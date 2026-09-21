@@ -13,5 +13,5 @@ window.LUGHATI_SITE = {
   contactEmail: "",
 
   /* Final public URL of this website, without a trailing slash (used for canonical + Open Graph). */
-  siteUrl: ""
+  siteUrl: "https://lughati-web.github.io/lughati-website"
 };

@@ -19,7 +19,7 @@
 | المطلوب | أين |
 |---|---|
 | **رابط Google Play** بعد نشر التطبيق | `assets/js/site-config.js` → `playUrl` |
-| **عنوان الموقع النهائي** | `assets/js/site-config.js` → `siteUrl`؛ واستبدل `og:image` في كل صفحة بمسار مطلق |
+| **عنوان الموقع النهائي** | ✅ مضبوط: `https://lughati-web.github.io/lughati-website` (`siteUrl` + `og:image` مطلق في كل الصفحات) |
 | رابط الخصوصية + رابط حذف الحساب في Play Console | `https://<siteUrl>/privacy-policy.html` و`https://<siteUrl>/delete-account.html` |
 
 ## 3. Play Console — قرارات يدوية
