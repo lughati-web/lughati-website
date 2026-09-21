@@ -138,13 +138,13 @@
         <h3>2.2 تفضيلاتك</h3>
         <ul>
           <li>لغة الواجهة، اللغة التي تتعلّمها، هدفك من التعلّم، وطريقة البداية التي اخترتها.</li>
-          <li>اسم العرض الذي تختاره داخل التطبيق، وحقل العمر الاختياري (بين 3 و120). لا يُستخدم العمر لأي غرض إعلاني ولا لتغيير المحتوى. كلاهما ضمن التفضيلات التي تُنقل مع المزامنة إن فعّلتها (القسم 5).</li>
+          <li>اسم العرض الذي تختاره داخل التطبيق، وحقل العمر الاختياري (بين 3 و120). لا يغيّر العمر المحتوى ولا يُرسل لأحد؛ استخدامه الوحيد أن التطبيق، إن كان العمر المُدخل أقل من 13، يطلب من شبكة الإعلانات معاملة الطلبات على أنها موجَّهة لطفل، وإن كان بين 13 و15 يعلمها أن المستخدم قد يكون دون سنّ الموافقة (القسم 6). كلاهما ضمن التفضيلات التي تُنقل مع المزامنة إن فعّلتها (القسم 5).</li>
           <li>إعدادات التذكيرات، وسجلّ التذكيرات التي عُرضت عليك.</li>
         </ul>
         <h3>2.3 سجلّ الموافقات</h3>
         <p>عندما توافق على ربط حساب Google أو على المزامنة السحابية، يسجّل التطبيق محليًا أنك وافقت ومتى، ليعرف ألا يسألك مرة أخرى بلا داعٍ.</p>
         <h3>2.4 النسخ الاحتياطي لنظام Android</h3>
-        <p>يسمح التطبيق لنظام Android بإدراج مساحة تخزينه المحلية كاملة (كل ما في القسمين 2 و4، بما فيه ملف حساب Google إن ربطته) ضمن النسخة الاحتياطية للجهاز التي يديرها النظام (Android Backup) ونقل البيانات بين الأجهزة، إلى حساب Google الذي ضبطتَه على هاتفك. هذه آلية من النظام تتحكم فيها من إعدادات Android (النسخ الاحتياطي)، ولا نصل إليها نحن.</p>
+        <p>يسمح التطبيق لنظام Android بإدراج ملف تقدّمك وتفضيلاتك وموافقاتك (القسم 2) ضمن النسخة الاحتياطية للجهاز التي يديرها النظام (Android Backup) ونقل البيانات بين الأجهزة، إلى حساب Google الذي ضبطتَه على هاتفك. <strong>ملف حساب Google المرتبط (القسم 4) مستثنى صراحة</strong> من النسخ الاحتياطي ومن النقل: حساب حذفته لا يعود مع استعادة نسخة احتياطية، والهاتف الجديد يربط حسابه بنفسه. هذه آلية من النظام تتحكم فيها من إعدادات Android (النسخ الاحتياطي)، ولا نصل إليها نحن.</p>
 
         <h2 id="ar-permissions">3. الأذونات التي يطلبها التطبيق</h2>
         <div class="table-wrap">
@@ -166,7 +166,7 @@
           <li><strong>كيف يعمل:</strong> يطلب التطبيق من Google رمز تعريف (ID token) عبر Android Credential Manager، بعد أن يطلب موافقتك الصريحة داخل التطبيق قبل فتح شاشة Google. يتحقق التطبيق من الرمز على الجهاز، ويحتفظ به في الذاكرة لمدة الجلسة فقط؛ لا يُكتب الرمز في أي ملف.</li>
           <li><strong>ما يُقرأ ويُحفظ محليًا:</strong> معرّف Google الثابت لحسابك، اسمك، بريدك الإلكتروني، ورابط صورة ملفك الشخصي (إن وُجدت)، مع تاريخ الربط وآخر تأكيد. تُحفظ على جهازك فقط.</li>
           <li><strong>ما لا يحدث:</strong> لا تُرسل هذه البيانات إلى أي خادم للمطوّر (لا يوجد خادم)، ولا تُشارك مع أطراف ثالثة، ولا يمنح تسجيل الدخول أي استحقاق مدفوع.</li>
-          <li><strong>إنهاء الربط:</strong> «تسجيل الخروج» من التطبيق يمسح الربط وبيانات الملف من جهازك ويطلب من Credential Manager نسيان الجلسة، ويبقى تقدّمك التعليمي كما هو. تسجيل الخروج لا يلغي الإذن الذي منحته للتطبيق لدى Google؛ لإلغائه أزل «لغتي» من <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">إعدادات الوصول في حساب Google</a>.</li>
+          <li><strong>إنهاء الربط:</strong> «تسجيل الخروج» من التطبيق يمسح الربط وبيانات الملف من جهازك ويطلب من Credential Manager نسيان الجلسة، ويبقى تقدّمك التعليمي كما هو. تسجيل الخروج لا يلغي الإذن الذي منحته للتطبيق لدى Google؛ يلغيه «حذف حساب Lughati» (القسم 12)، أو أزله بنفسك من <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">إعدادات الوصول في حساب Google</a>.</li>
         </ul>
         <p>المصادقة تعالجها Google LLC وفق <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">سياسة خصوصية Google</a>.</p>
 
@@ -176,7 +176,7 @@
           <li><strong>ما يُرفع:</strong> ملف واحد باسم <code dir="ltr">lughati-learner.bundle</code> يحوي: سجلّات مساراتك اللغوية (2.1: الدروس، المحاولات، سجلّ المراجعة، تحديد المستوى، الإنجازات، الوحدات المتخطّاة)، تفضيلاتك (2.2: اللغات والهدف، واسم العرض والعمر إن أدخلتهما)، ونقاطك وسلسلتك وهدفك اليومي ومعرّف المتعلّم العشوائي. <strong>لا يحوي</strong> بيانات حساب Google (المعرّف، الاسم، البريد، الصورة) ولا الاشتراك أو Test Pass ولا سجلّ الموافقات ولا جلسات الامتحانات ولا سجلّ التذكيرات؛ هذه تبقى على الجهاز. يحمل الملف أيضًا بيانات وصفية بسيطة (رقم النسخة، وقت التحديث، معرّف المتعلّم العشوائي).</li>
           <li><strong>متى:</strong> فقط عندما تضغط «مزامنة الآن» بعد موافقتك الصريحة على المزامنة السحابية وتفويض Google.</li>
           <li><strong>أين:</strong> في <span dir="ltr">appDataFolder</span> داخل Google Drive الخاص بك أنت. لا يملك المطوّر أي وصول إليه.</li>
-          <li><strong>الحذف:</strong> لا يوفّر هذا الإصدار زر حذف سحابي داخل التطبيق. احذفه بنفسك من Google Drive: <em>الإعدادات → إدارة التطبيقات → لغتي → حذف بيانات التطبيق المخفية</em>.</li>
+          <li><strong>الحذف:</strong> «حذف حساب Lughati» داخل التطبيق يحذف هذا الملف (القسم 12). ويمكنك حذفه بنفسك أيضًا من Google Drive: <em>الإعدادات → إدارة التطبيقات → لغتي → حذف بيانات التطبيق المخفية</em>.</li>
         </ul>
         <p><strong>بيان الاستخدام المحدود:</strong> يلتزم استخدام لغتي للمعلومات الواردة من واجهات Google (Google APIs)، ونقلها إلى أي تطبيق آخر، بـ<a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">سياسة بيانات المستخدم لخدمات Google API</a>، بما فيها متطلبات الاستخدام المحدود (Limited Use).</p>
 
@@ -186,7 +186,7 @@
           <li><strong>نوع الإعلانات:</strong> إعلان بانر في الشاشة الرئيسية في الخطة المجانية، وإعلان مكافأة <em>اختياري</em> يمكنك مشاهدته لإضافة دقائق تعلّم إلى حدّك اليومي. لا يُعرض إعلان المكافأة إلا بطلبك، وتُحتسب المكافأة على جهازك.</li>
           <li><strong>غير مخصّصة:</strong> في هذا الإصدار يطلب التطبيق إعلانات غير مخصّصة فقط (non-personalized)، ولا يُطلب أي إعلان قبل أن تسمح حالة الموافقة بذلك.</li>
           <li><strong>ما قد يجمعه SDK الإعلانات:</strong> معرّف الإعلانات (Advertising ID)، App Set ID، عنوان IP (ومنه موقع تقريبي)، التفاعل مع الإعلانات، وبيانات تشخيصية. التطبيق نفسه لا يرسل أي بيانات إلى شبكة الإعلانات. التفاصيل في <a href="https://support.google.com/admob/answer/9755590" target="_blank" rel="noopener">صفحة Google عن بيانات Mobile Ads SDK</a> و<a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">كيف تستخدم Google المعلومات في الإعلانات</a>.</li>
-          <li><strong>الموافقة:</strong> يعرض التطبيق نموذج موافقة Google (UMP) حيث يفرضه القانون (المنطقة الاقتصادية الأوروبية والمملكة المتحدة وبعض الولايات الأمريكية)، ويحفظ SDK الإعلانات خيارك على جهازك. لا يحتوي هذا الإصدار على شاشة لتعديل الخيار لاحقًا داخل التطبيق؛ لإعادة السؤال احذف بيانات التطبيق من إعدادات Android (التطبيقات → لغتي → مساحة التخزين).</li>
+          <li><strong>الموافقة:</strong> يعرض التطبيق نموذج موافقة Google (UMP) حيث يفرضه القانون (المنطقة الاقتصادية الأوروبية والمملكة المتحدة وبعض الولايات الأمريكية)، ويحفظ SDK الإعلانات خيارك على جهازك. حين يقرّر SDK أن لك حقّ تغيير خيارك لاحقًا، يظهر في تبويب الملف → الخصوصية بند «خيارات خصوصيّة الإعلانات» يفتح نموذج Google نفسه؛ ولا يظهر لمن لا ينطبق عليه.</li>
           <li><strong>تحكّمك:</strong> يمكنك إعادة ضبط معرّف الإعلانات أو حذفه من إعدادات Android (Google → الإعلانات).</li>
           <li><strong>بريميوم:</strong> اشتراك «لغتي بريميوم» بلا إعلانات.</li>
         </ul>
@@ -196,8 +196,8 @@
           <li><strong>المنتجات:</strong> اشتراك «لغتي بريميوم»، و«Test Pass» للغتي Test (شهر أو ثلاثة أشهر، شراء لمرة واحدة).</li>
           <li><strong>المعالجة:</strong> تتم كل عمليات الدفع عبر Google Play. التطبيق لا يرى رقم بطاقتك ولا عنوانك ولا بيانات الفوترة؛ يرى فقط أن الشراء تمّ ونوعه.</li>
           <li><strong>الإلغاء والاسترداد:</strong> عبر Google Play (رابط إدارة الاشتراكات موجود داخل التطبيق)، وفق <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">شروط Google Play</a>.</li>
-          <li><strong>التحقق من الشراء:</strong> لا يمنح التطبيق أي استحقاق مدفوع من تلقاء نفسه؛ يُرسَل رمز الشراء (purchase token) ومعرّف المنتج ومعرّف الطلب واسم الحزمة عبر HTTPS إلى خدمة تحقق تسأل Google Play عن الشراء وتردّ بالحكم. لا تُرسل هوية المستخدم ولا بريده ولا أي بيانات دفع. تُشغَّل خدمة التحقق من قِبل <span class="todo">[مشغّل خدمة التحقق]</span>، وتحتفظ بسجلّ (رمز الشراء ونتيجة التحقق ووقتها) لمدة <span class="todo">[مدة الاحتفاظ]</span> لإثبات الاستحقاق.</li>
-          <li><strong>الأكواد الترويجية:</strong> الكود الذي تُدخله يُرسل عبر HTTPS إلى خدمة تحقق الأكواد مع اسم الحزمة ومعرّف المتعلّم العشوائي (2.1) لمنع إعادة الاستخدام؛ لا اسم ولا بريد. يحتفظ التطبيق محليًا بعدد المحاولات وبالكود المقبول.</li>
+          <li><strong>التحقق من الشراء:</strong> لا يمنح التطبيق أي استحقاق مدفوع من تلقاء نفسه، بل يعتمد على خدمة تحقق تسأل Google Play عن الشراء. <strong>في الإصدار الحالي لم تُضبط خدمة تحقق</strong>: لا تُرسل أي بيانات شراء إلى أي خادم للمطوّر. عندما تُفعَّل في إصدار لاحق، سيُرسَل إليها رمز الشراء (purchase token) ومعرّف المنتج ومعرّف الطلب واسم الحزمة فقط — لا هوية ولا بريد ولا بيانات دفع — وسنحدّث هذه السياسة باسم مشغّل الخدمة ومدة احتفاظها بسجلّ التحقق قبل ذلك.</li>
+          <li><strong>الأكواد الترويجية:</strong> في الإصدار الحالي لا يمكن استبدال الأكواد (لا خدمة مضبوطة) ولا يُرسل شيء. عند تفعيلها، يُرسل الكود الذي تُدخله عبر HTTPS مع اسم الحزمة ومعرّف المتعلّم العشوائي (2.1) لمنع إعادة الاستخدام؛ لا اسم ولا بريد. يحتفظ التطبيق محليًا بعدد المحاولات وبالكود المقبول.</li>
         </ul>
 
         <h2 id="ar-speech">8. الميكروفون والتعرّف على الكلام</h2>
@@ -225,7 +225,8 @@
         <h2 id="ar-retention">12. الاحتفاظ بالبيانات وحذفها</h2>
         <p>لأن بياناتك على جهازك، فإن حذفها بيدك:</p>
         <ul>
-          <li><strong>محليًا:</strong> «حذف البيانات» في تبويب الملف يسجّل خروجك، ويلغي التذكيرات، ويمسح كل ما يخزّنه التطبيق على الجهاز (التقدّم، التفضيلات، ملف الحساب، سجلّ الموافقات، الامتحانات)، ويعيد التطبيق إلى شاشة البداية. لا يحذف نسخة Drive ولا يلغي الإذن لدى Google. إلغاء تثبيت التطبيق يحذف بيانات الجهاز أيضًا (مع ملاحظة النسخة الاحتياطية للنظام في 2.4).</li>
+          <li><strong>حذف حساب Lughati (من داخل التطبيق):</strong> في تبويب الملف → بطاقة الحساب → «حذف حساب Lughati». بعد تأكيدك، يحذف التطبيق بالترتيب: ملف لغتي من مجلد التطبيق المخفي في Google Drive الخاص بك (بالإذن نفسه، وقد يطلب Google تأكيده)، ثم يطلب من Google إلغاء إذن لغتي للوصول إلى حسابك (عبر نقطة إلغاء الرموز الرسمية لدى Google)، ثم — بعد أن تقرأ النتيجة — يمسح كل بيانات لغتي على الجهاز ويعود إلى شاشة البداية. إن فشل حذف نسخة Drive لا يُمسح شيء ويُخبرك التطبيق بالسبب. لا يُحذف حساب Google نفسه ولا سجلّات مشترياتك لدى Google Play.</li>
+          <li><strong>محليًا فقط:</strong> «حذف البيانات» في تبويب الملف يسجّل خروجك، ويلغي التذكيرات، ويمسح كل ما يخزّنه التطبيق على الجهاز (التقدّم، التفضيلات، ملف الحساب، سجلّ الموافقات، الامتحانات)، ويعيد التطبيق إلى شاشة البداية. لا يحذف نسخة Drive ولا يلغي الإذن لدى Google. إلغاء تثبيت التطبيق يحذف بيانات الجهاز أيضًا (مع ملاحظة النسخة الاحتياطية للنظام في 2.4).</li>
           <li><strong>حساب Google:</strong> «تسجيل الخروج» من التطبيق (يمسح ملف الحساب من الجهاز)، ثم إزالة صلاحية لغتي من <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">حساب Google</a>.</li>
           <li><strong>Google Drive:</strong> لا يحذف التطبيق نسخة Drive في هذا الإصدار؛ احذف بيانات التطبيق المخفية من إعدادات Drive كما في القسم 5.</li>
           <li><strong>الإعلانات:</strong> أعد ضبط معرّف الإعلانات أو احذفه من إعدادات Android.</li>
@@ -237,7 +238,7 @@
         <p>بحسب بلد إقامتك، قد يكون لك حق الاطلاع على بياناتك وتصحيحها وحذفها والاعتراض على معالجتها وسحب موافقتك. في لغتي تمارس معظم هذه الحقوق مباشرة من جهازك: بياناتك ظاهرة داخل التطبيق، وموافقاتك قابلة للسحب (تسجيل الخروج، إيقاف المزامنة، خيارات الخصوصية للإعلانات)، والحذف بالخطوات أعلاه. ولأي طلب آخر، تواصل معنا (القسم 18).</p>
 
         <h2 id="ar-children">14. الأطفال</h2>
-        <p>لغتي موجَّه لمن هم في الثالثة عشرة فما فوق، ولا نجمع عن قصد بيانات ممن هم دون ذلك. إذا كنت وليّ أمر وتعتقد أن طفلًا قدّم لنا بيانات عبر التواصل معنا، راسلنا لنحذفها.</p>
+        <p>لغتي موجَّه لمن هم في الثالثة عشرة فما فوق، ولا نجمع عن قصد بيانات ممن هم دون ذلك. إذا أُدخل في الملف عمر أقل من 13، يطلب التطبيق من شبكة الإعلانات معاملة طلباته على أنها موجَّهة لطفل (بلا إعلانات مخصّصة ولا معرّف إعلانات)، ويظل كل التعلّم على الجهاز. إذا كنت وليّ أمر وتعتقد أن طفلًا قدّم لنا بيانات عبر التواصل معنا، راسلنا لنحذفها.</p>
 
         <h2 id="ar-security">15. الأمن</h2>
         <p>تُحفظ بياناتك في مساحة التطبيق الخاصة على جهازك، التي يحميها نظام Android من التطبيقات الأخرى. الاتصالات مع خدمات Google ومع خدمة التحقق (إن وُجدت) تتم عبر HTTPS. لا يستضيف المطوّر بيانات المستخدمين، فلا توجد قاعدة بيانات مركزية يمكن اختراقها. ننصحك بحماية هاتفك بقفل شاشة.</p>
@@ -252,7 +253,7 @@
             <tr><td>Google AdMob / Mobile Ads SDK + UMP</td><td>الإعلانات والموافقة</td><td><a href="https://support.google.com/admob/answer/9755590" target="_blank" rel="noopener">بيانات Mobile Ads SDK</a></td></tr>
             <tr><td>Google Play Billing</td><td>المدفوعات</td><td><a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">شروط Google Play</a></td></tr>
             <tr><td>Alpha Cephei (نماذج Vosk)</td><td>تنزيل نموذج لغة، بلا بيانات مستخدم</td><td><a href="https://alphacephei.com/vosk/" target="_blank" rel="noopener">alphacephei.com/vosk</a></td></tr>
-            <tr><td>مشغّل خدمة التحقق من المشتريات (إن وُجد)</td><td>تأكيد الاستحقاق</td><td><span class="todo">[يُحدَّد عند النشر]</span></td></tr>
+            <tr><td>Google LLC — نقطة إلغاء رموز OAuth</td><td>إلغاء إذن لغتي عند حذف الحساب</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
           </tbody>
         </table>
         </div>
@@ -341,13 +342,13 @@
         <h3>2.2 Your preferences</h3>
         <ul>
           <li>Interface language, the language you are learning, your learning goal and the start mode you chose.</li>
-          <li>The display name you choose in the app and an optional age field (3 to 120). Age is not used for advertising or to change content. Both are part of the preferences that travel with sync if you enable it (section 5).</li>
+          <li>The display name you choose in the app and an optional age field (3 to 120). Age does not change content and is not sent to anyone; its only use is that, if the age entered is under 13, the app asks the ad network to treat requests as child-directed, and if it is 13 to 15, tells it the user may be under the age of consent (section 6). Both are part of the preferences that travel with sync if you enable it (section 5).</li>
           <li>Reminder settings and a log of the reminders shown to you.</li>
         </ul>
         <h3>2.3 Consent log</h3>
         <p>When you agree to link a Google account or to cloud sync, the app records locally that you agreed and when, so that it does not ask again unnecessarily.</p>
         <h3>2.4 Android system backup</h3>
-        <p>The app allows Android to include its entire local storage (everything in sections 2 and 4, including the Google account profile if you linked one) in the device backup managed by the system (Android Backup) and in device-to-device transfer, to the Google account configured on your phone. This is a system mechanism you control from Android settings (Backup); we have no access to it.</p>
+        <p>The app allows Android to include your progress, preferences and consents file (section 2) in the device backup managed by the system (Android Backup) and in device-to-device transfer, to the Google account configured on your phone. <strong>The linked Google account's profile file (section 4) is explicitly excluded</strong> from backup and from transfer: an account you deleted does not come back with a restored backup, and a new phone links its account itself. This is a system mechanism you control from Android settings (Backup); we have no access to it.</p>
 
         <h2 id="en-permissions">3. Permissions the app asks for</h2>
         <div class="table-wrap">
@@ -369,7 +370,7 @@
           <li><strong>How it works:</strong> the app requests an ID token from Google through Android Credential Manager, after asking for your explicit consent inside the app before the Google screen opens. The app verifies the token on the device and holds it in memory for the session only; the token is never written to a file.</li>
           <li><strong>What is read and stored locally:</strong> your account's stable Google ID, your name, your email address and the link to your profile picture (if any), together with the date of linking and of the last confirmation. They are stored on your device only.</li>
           <li><strong>What does not happen:</strong> this data is not sent to any developer server (there is none), is not shared with third parties, and signing in grants no paid entitlement.</li>
-          <li><strong>Unlinking:</strong> "Sign out" in the app clears the link and the profile data from your device and asks Credential Manager to forget the session; your learning progress stays. Signing out does not revoke the permission you granted the app at Google; to revoke it, remove Lughati from your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions</a>.</li>
+          <li><strong>Unlinking:</strong> "Sign out" in the app clears the link and the profile data from your device and asks Credential Manager to forget the session; your learning progress stays. Signing out does not revoke the permission you granted the app at Google; "Delete Lughati account" (section 12) revokes it, or remove it yourself from your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account permissions</a>.</li>
         </ul>
         <p>Authentication is processed by Google LLC under the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</p>
 
@@ -379,7 +380,7 @@
           <li><strong>What is uploaded:</strong> a single file named <code>lughati-learner.bundle</code> containing: your course records (2.1: lessons, attempts, review history, placement, achievements, tested-out units), your preferences (2.2: languages and goal, and your display name and age if you entered them), and your points, streak, daily goal and the random learner identifier. It does <strong>not</strong> contain Google account data (ID, name, email, picture), the subscription or Test Pass, the consent log, exam sittings or the reminder log; those stay on the device. The file also carries simple metadata (format version, update time, the random learner identifier).</li>
           <li><strong>When:</strong> only when you tap "Sync now", after you have explicitly agreed to cloud sync and authorized Google.</li>
           <li><strong>Where:</strong> in the <code>appDataFolder</code> of <em>your own</em> Google Drive. The developer has no access to it.</li>
-          <li><strong>Deletion:</strong> this version has no in-app cloud-delete button. Delete it yourself from Google Drive: <em>Settings → Manage apps → Lughati → Delete hidden app data</em>.</li>
+          <li><strong>Deletion:</strong> "Delete Lughati account" in the app deletes this file (section 12). You can also delete it yourself from Google Drive: <em>Settings → Manage apps → Lughati → Delete hidden app data</em>.</li>
         </ul>
         <p><strong>Limited Use disclosure:</strong> Lughati's use and transfer to any other app of information received from Google APIs will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy" target="_blank" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
 
@@ -389,7 +390,7 @@
           <li><strong>Ad types:</strong> a banner ad on the home screen on the free plan, plus an <em>optional</em> rewarded ad you may watch to add learning minutes to your daily allowance. A rewarded ad is shown only when you ask for it, and the reward is counted on your device.</li>
           <li><strong>Non-personalized:</strong> in this version the app requests non-personalized ads only, and requests no ad until the consent state allows it.</li>
           <li><strong>What the ads SDK may collect:</strong> Advertising ID, App Set ID, IP address (and from it an approximate location), ad interactions and diagnostic data. The app itself sends nothing to the ad network. Details in <a href="https://support.google.com/admob/answer/9755590" target="_blank" rel="noopener">Google's Mobile Ads SDK data disclosure</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">how Google uses information in advertising</a>.</li>
-          <li><strong>Consent:</strong> the app shows Google's consent form (UMP) where the law requires it (EEA, UK and certain US states), and the ads SDK stores your choice on your device. This version has no in-app screen to change that choice later; to be asked again, clear the app's data from Android settings (Apps → Lughati → Storage).</li>
+          <li><strong>Consent:</strong> the app shows Google's consent form (UMP) where the law requires it (EEA, UK and certain US states), and the ads SDK stores your choice on your device. When the SDK decides you are entitled to change that choice later, the Profile tab → Privacy shows an "Ad privacy options" entry that opens Google's own form; it is not shown to people it does not apply to.</li>
           <li><strong>Your control:</strong> you can reset or delete your Advertising ID in Android settings (Google → Ads).</li>
           <li><strong>Premium:</strong> the Lughati Premium subscription has no ads.</li>
         </ul>
@@ -399,8 +400,8 @@
           <li><strong>Products:</strong> the "Lughati Premium" subscription, and the "Test Pass" for Lughati Test (one month or three months, one-time purchase).</li>
           <li><strong>Processing:</strong> every payment goes through Google Play. The app never sees your card number, address or billing details; it only learns that a purchase was made and which one.</li>
           <li><strong>Cancellation and refunds:</strong> through Google Play (a manage-subscriptions link is inside the app), under the <a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms</a>.</li>
-          <li><strong>Purchase verification:</strong> the app never grants a paid entitlement on its own; the purchase token, product ID, order ID and package name are sent over HTTPS to a verification service that asks Google Play about the purchase and returns the verdict. No user identity, email or payment details are sent. The verification service is operated by <span class="todo">[verification-service operator]</span> and keeps a record (purchase token, verdict and time) for <span class="todo">[retention period]</span> to prove the entitlement.</li>
-          <li><strong>Promo codes:</strong> a code you enter is sent over HTTPS to the code-verification service together with the package name and the random learner identifier (2.1) to prevent reuse; no name or email. The app keeps the attempt count and the accepted code locally.</li>
+          <li><strong>Purchase verification:</strong> the app never grants a paid entitlement on its own; it relies on a verification service that asks Google Play about the purchase. <strong>In the current version no verification service is configured</strong>: no purchase data is sent to any developer server. When one is enabled in a later version, it will receive only the purchase token, product ID, order ID and package name — no identity, email or payment details — and we will update this policy with the operator's name and its record-retention period before that.</li>
+          <li><strong>Promo codes:</strong> in the current version codes cannot be redeemed (no service is configured) and nothing is sent. When enabled, a code you enter is sent over HTTPS with the package name and the random learner identifier (2.1) to prevent reuse; no name or email. The app keeps the attempt count and the accepted code locally.</li>
         </ul>
 
         <h2 id="en-speech">8. Microphone and speech recognition</h2>
@@ -428,7 +429,8 @@
         <h2 id="en-retention">12. Retention and deletion</h2>
         <p>Because your data lives on your device, deleting it is in your hands:</p>
         <ul>
-          <li><strong>Locally:</strong> "Delete data" in the Profile tab signs you out, cancels reminders, wipes everything the app stores on the device (progress, preferences, the account profile, the consent log, exams) and returns the app to its first screen. It does not delete the Drive copy and does not revoke the permission at Google. Uninstalling the app also deletes the device data (see the system backup note in 2.4).</li>
+          <li><strong>Delete Lughati account (in the app):</strong> Profile tab → account card → "Delete Lughati account". After you confirm, the app deletes, in order: Lughati's file from the hidden app folder of your Google Drive (with the same permission; Google may ask you to confirm it), then asks Google to revoke Lughati's access to your account (through Google's official token-revocation endpoint), then — once you have read the result — wipes all Lughati data on the device and returns to the first screen. If the Drive copy cannot be deleted, nothing is wiped and the app tells you why. Your Google account itself and your Google Play purchase records are not deleted.</li>
+          <li><strong>Locally only:</strong> "Delete data" in the Profile tab signs you out, cancels reminders, wipes everything the app stores on the device (progress, preferences, the account profile, the consent log, exams) and returns the app to its first screen. It does not delete the Drive copy and does not revoke the permission at Google. Uninstalling the app also deletes the device data (see the system backup note in 2.4).</li>
           <li><strong>Google account:</strong> "Sign out" in the app (clears the account profile from the device), then remove Lughati's access in your <a href="https://myaccount.google.com/permissions" target="_blank" rel="noopener">Google account</a>.</li>
           <li><strong>Google Drive:</strong> the app does not delete the Drive copy in this version; delete the hidden app data from Drive settings as described in section 5.</li>
           <li><strong>Ads:</strong> reset or delete your Advertising ID in Android settings.</li>
@@ -440,7 +442,7 @@
         <p>Depending on where you live, you may have the right to access, correct and delete your data, to object to its processing and to withdraw consent. In Lughati you exercise most of these rights directly from your device: your data is visible inside the app, your consents can be withdrawn (sign out, stop syncing, ad privacy options), and deletion follows the steps above. For anything else, contact us (section 18).</p>
 
         <h2 id="en-children">14. Children</h2>
-        <p>Lughati is intended for people aged 13 and over, and we do not knowingly collect data from anyone younger. If you are a parent or guardian and believe a child has sent us data by contacting us, write to us and we will delete it.</p>
+        <p>Lughati is intended for people aged 13 and over, and we do not knowingly collect data from anyone younger. If an age under 13 is entered in the profile, the app asks the ad network to treat its requests as child-directed (no personalized ads and no advertising ID), and all learning stays on the device. If you are a parent or guardian and believe a child has sent us data by contacting us, write to us and we will delete it.</p>
 
         <h2 id="en-security">15. Security</h2>
         <p>Your data is kept in the app's private storage on your device, which Android protects from other apps. Communication with Google services and with the verification service (if any) uses HTTPS. The developer hosts no user data, so there is no central database to breach. We recommend protecting your phone with a screen lock.</p>
@@ -455,7 +457,7 @@
             <tr><td>Google AdMob / Mobile Ads SDK + UMP</td><td>Ads and consent</td><td><a href="https://support.google.com/admob/answer/9755590" target="_blank" rel="noopener">Mobile Ads SDK data disclosure</a></td></tr>
             <tr><td>Google Play Billing</td><td>Payments</td><td><a href="https://play.google.com/about/play-terms/" target="_blank" rel="noopener">Google Play Terms</a></td></tr>
             <tr><td>Alpha Cephei (Vosk models)</td><td>Language-model download, no user data</td><td><a href="https://alphacephei.com/vosk/" target="_blank" rel="noopener">alphacephei.com/vosk</a></td></tr>
-            <tr><td>Purchase-verification operator (if any)</td><td>Entitlement confirmation</td><td><span class="todo">[to be set at publication]</span></td></tr>
+            <tr><td>Google LLC — OAuth token-revocation endpoint</td><td>Revokes Lughati's access when you delete the account</td><td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a></td></tr>
           </tbody>
         </table>
         </div>
