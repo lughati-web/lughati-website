@@ -20,7 +20,7 @@
 |---|---|
 | **رابط Google Play** بعد نشر التطبيق | `assets/js/site-config.js` → `playUrl` |
 | **عنوان الموقع النهائي** | ✅ مضبوط: `https://lughati-web.github.io/lughati-website` (`siteUrl` + `og:image` مطلق في كل الصفحات) |
-| رابط الخصوصية + رابط حذف الحساب في Play Console | `https://<siteUrl>/privacy-policy.html` و`https://<siteUrl>/delete-account.html` |
+| رابط الخصوصية + رابط حذف الحساب في Play Console | `https://lughati-web.github.io/lughati-website/privacy-policy.html` و`https://lughati-web.github.io/lughati-website/delete-account.html` (منشوران) |
 
 ## 3. Play Console — قرارات يدوية
 
