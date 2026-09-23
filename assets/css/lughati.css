@@ -230,12 +230,19 @@ html[data-lang="en"] [data-lang="ar"] { display: none !important; }
 }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: var(--space-4); min-height: 68px; }
 .brand { display: inline-flex; align-items: center; gap: 10px; font-weight: 800; font-size: 1.15rem; color: var(--on-scene); }
-/* The mark is the logo's own feather, transparent: no plate, no square — it
-   sits on the night rather than on top of it. */
-.brand img { width: auto; height: 34px; filter: drop-shadow(0 4px 10px rgba(15, 11, 22, .35)); transition: transform var(--t-standard) var(--ease-enter); }
-.brand:hover img { transform: translateY(-1px) rotate(-3deg); }
-.brand-word { display: inline-flex; flex-direction: column; line-height: 1.05; }
-.brand-word small { font-weight: 500; font-size: .72rem; color: var(--cream-faint); }
+/* The bar carries the name itself: «لغتي │ Lughati», one line, the second
+   name behind a gold hairline. No mark beside it — the logo lives in the hero. */
+.brand-word { display: inline-flex; flex-direction: row; align-items: center; gap: 9px; line-height: 1; }
+.brand-word small {
+  font-weight: 500; font-size: .78rem; color: var(--cream-muted);
+  position: relative; padding-inline-start: 10px; letter-spacing: .01em;
+}
+.brand-word small::before {
+  content: ""; position: absolute; inset-inline-start: 0; top: 50%; transform: translateY(-50%);
+  width: 1px; height: 15px; background: rgba(200, 160, 109, .6);
+}
+.brand { transition: opacity var(--t-quick); }
+.brand:hover { opacity: .88; }
 .nav-links { display: none; align-items: center; gap: 4px; list-style: none; margin: 0; padding: 0; }
 .nav-links a {
   display: inline-block; padding: 10px 14px; border-radius: var(--pill);
@@ -291,11 +298,23 @@ html[data-lang="en"] [data-lang="ar"] { display: none !important; }
 .hero-inner { display: grid; gap: var(--space-6); align-items: end; position: relative; }
 @media (min-width: 880px) { .hero-inner { grid-template-columns: 1.15fr .85fr; } }
 .hero-copy { padding-bottom: clamp(40px, 6vw, 80px); position: relative; z-index: 2; }
+/* No plate. The logo stands in a pool of warm light that dissolves into the
+   night — the brand's own "knowledge is light", and the reason the black
+   calligraphy stays readable without a single one of its colours changing. */
 .hero-logo {
   width: min(180px, 44vw); margin-bottom: var(--space-4);
-  padding: 14px 18px 4px; border-radius: 26px 26px 14px 14px;
-  background: var(--cream); box-shadow: 0 24px 60px rgba(15,11,22,.35), inset 0 0 0 2px var(--hairline-gold);
+  position: relative; background: none; box-shadow: none; border-radius: 0;
 }
+.hero-logo::before {
+  content: ""; position: absolute; inset: -4% -30%;
+  /* One pool, under the calligraphy: the feather rises out of it into the night. */
+  background: radial-gradient(ellipse 62% 38% at 50% 72%,
+    rgba(255, 248, 240, .96) 0%, rgba(255, 248, 240, .82) 40%,
+    rgba(255, 246, 236, .34) 64%, rgba(255, 246, 236, 0) 84%);
+  filter: blur(16px);
+  pointer-events: none;
+}
+.hero-logo img { position: relative; }
 .hero-logo img { width: 100%; height: auto; }
 .hero h1 { color: var(--cream); max-width: 14ch; text-wrap: balance; }
 .hero h1 em { font-style: normal; color: var(--turquoise-light); }
@@ -409,7 +428,6 @@ html[data-lang="en"] [data-lang="ar"] { display: none !important; }
 .footer-grid { display: grid; gap: var(--space-6); }
 @media (min-width: 760px) { .footer-grid { grid-template-columns: 1.4fr 1fr 1fr; } }
 .footer-brand { display: flex; gap: 12px; align-items: center; margin-bottom: var(--space-3); color: var(--on-scene); font-weight: 800; }
-.footer-brand img { width: auto; height: 32px; filter: drop-shadow(0 4px 10px rgba(15, 11, 22, .35)); }
 .site-footer h4 { color: var(--on-scene); font-size: .95rem; margin-bottom: var(--space-3); }
 .site-footer ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
 .site-footer a { color: var(--cream-muted); transition: color var(--t-quick); }
@@ -512,8 +530,9 @@ html[data-lang="en"] [data-lang="ar"] { display: none !important; }
   .cta-row .btn { white-space: normal; flex: 1 1 100%; text-align: center; }
 }
 /* Hero logo: a square cream card that crops the tall wordmark to its feather + calligraphy */
-.hero-logo { width: min(200px, 48vw); height: min(200px, 48vw); padding: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.hero-logo img { width: auto; height: 100%; max-width: none; transform: scale(1.5); transform-origin: 50% 50%; }
+/* The whole logo, uncropped: feather above, «لغتي» below, nothing cut off. */
+.hero-logo { width: min(190px, 46vw); height: auto; padding: 0; display: block; overflow: visible; }
+.hero-logo img { width: 100%; height: auto; max-width: none; transform: none; }
 @media print { .reveal { opacity: 1 !important; transform: none !important; } }
 /* Single-column hero: the road would cut across Zizo, so it rests. */
 @media (max-width: 879px) { .hero-road { display: none; } }
