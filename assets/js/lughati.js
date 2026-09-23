@@ -136,6 +136,14 @@
     canonical.href = cfg.siteUrl + '/' + (page === 'index.html' ? '' : page);
   }
 
+  /* ---------- The bar knows when the page has moved ---------- */
+  var header = document.querySelector(".site-header");
+  if (header) {
+    var onScroll = function () { header.classList.toggle("is-scrolled", window.scrollY > 8); };
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+  }
+
   /* ---------- Scroll reveal (subtle, once, respects reduced motion) ---------- */
   var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   var items = document.querySelectorAll('.reveal');
