@@ -11,8 +11,7 @@ website/
 ├─ assets/css/lughati.css  shared styles (tokens from Palette.kt / BRAND_GUIDE.md)
 ├─ assets/js/lughati.js    language switch, mobile nav, scroll reveal, config
 ├─ assets/js/site-config.js  THE ONE PLACE for playUrl / contactEmail / siteUrl
-├─ assets/images/          logo, icons (favicon sizes), OG image, zizo/ (unedited app PNGs)
-└─ USER_ACTION_REQUIRED.md what only the owner can fill in
+└─ assets/images/          logo, icons (favicon sizes), OG image, zizo/ (unedited app PNGs)
 ```
 
 ## How language switching works
