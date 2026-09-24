@@ -443,7 +443,13 @@ html[data-lang="en"] [data-lang="ar"] { display: none !important; }
 .doc { padding-block: clamp(40px, 6vw, 72px); }
 .doc-layout { display: grid; gap: var(--space-7); }
 @media (min-width: 960px) { .doc-layout { grid-template-columns: 260px minmax(0, 1fr); align-items: start; } }
-.doc-toc { position: sticky; top: 88px; padding: var(--space-5); border-radius: var(--arch-md); background: rgba(255,255,255,.55); border: 1px solid var(--hairline-gold); font-size: .93rem; }
+/* On phones the doc is a single column, so the contents list is a normal block
+   in the flow; it only becomes a sticky sidebar where the two-column layout
+   exists (>=960px). Sticky on a single column pinned it over the body text and
+   swallowed taps on the links beneath it. */
+.doc-toc { position: static; padding: var(--space-5); border-radius: var(--arch-md); background: rgba(255,255,255,.55); border: 1px solid var(--hairline-gold); font-size: .93rem; }
+@media (min-width: 960px) { .doc-toc { position: sticky; top: 88px; } }
+@media (max-width: 959px) { .doc-toc { position: static; top: auto; } }
 .doc-toc h2 { font-size: 1rem; margin-bottom: var(--space-3); }
 .doc-toc ol { margin: 0; padding-inline-start: 1.2em; display: grid; gap: 6px; }
 .doc-toc a { color: var(--ink-soft); }
