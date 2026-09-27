@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://lughati-web.github.io/lughati-website/sitemap.xml
